@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block title %} Exponencial {% endblock %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid" style="background-color: rgb(238, 240, 157);">
+  <div class="container">
+    <h1 class="display-4" style="text-align: center; font-family: 'Courier New', Courier, monospace;">MÉTODO EXPONENCIAL</h1>
+    </div>
+</div> 
+<form action="/exponencialr/" method="POST">
+    {% csrf_token %}
+    <div class="container center">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Landa (λ):</label>
+      <input type="number" name="landa" class="form-control" id="formGroupExampleInput" placeholder="" required>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Iteraciones:</label>
+      <input type="number" name="iteracion" class="form-control" id="formGroupExampleInput2" placeholder="" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color: #f89545; color: black; margin-left: 50%;" >CALCULAR</button>
+  </div>
+  </form>
+{% endblock %}

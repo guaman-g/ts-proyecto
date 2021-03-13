@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% load static %}
+{% block title %} Gráfico{% endblock %}
+{% block content %}
+
+
+<div class="jumbotron jumbotron-fluid" style="background-color: rgb(238, 240, 157);">
+  <div class="container">
+    <h1 class="display-4" style="text-align: center; font-family: 'Courier New', Courier, monospace;">MÉTODO GRÁFICO</h1>
+    <!--p class="lead"> línea de espera a una hilera formada por uno o varios clientes que aguardan para recibir un servicio.</p-->
+  </div>
+</div> 
+<div class="container">
+  <form action="/graficor/" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Ingresar cantidad:</label>
+      <input  type="number" style="text-align: center;" name="cantidad_Muestra" min="1" pattern="^[0-9]+" class="form-control" id="num_muestra" required>
+    </div>
+    <button class="btn btn-primary" onclick="Generar()" style="background-color: #f89545; color: black; margin-left: 50%;">GENERAR</button>
+    <div id="inputs_generados" ></div>
+    <br>   </br>
+    <button type="submit" class="btn btn-primary" style="background-color: #f89545; color: black; margin-left: 50%;" >CALCULAR</button>
+  </form>
+</div>
+<script src="{% static 'js/generar.js'%}"></script>
+{% endblock %}

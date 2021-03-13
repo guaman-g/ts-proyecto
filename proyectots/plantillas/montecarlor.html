@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% load static %}
+{% block title %} Solución {% endblock %}
+{% block content %}
+
+<h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">SOLUCIÓN MONTECARLO</h1>
+
+<div class="container center">
+<h5 style="text-align: center;">Tabla Llegada</h5>
+<div id = "my_table">
+        {{tablaLlegada | safe}} 
+</div>
+<h5 style="text-align: center;">Tabla Servicio</h5>
+<div id = "my_table">
+        {{tablaServicio | safe}} 
+</div>
+<h5 style="text-align: center;">Tabla Final</h5>
+<div id = "my_table">
+        {{html | safe}} 
+</div>
+</div>
+
+{% endblock %}

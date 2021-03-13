@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% load static %}
+{% block title %} Solución {% endblock %}
+{% block content %}
+
+
+<h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">SOLUCIÓN GRÁFICO</h1>
+
+<div class="container center">
+<h4>VALORES</h4>
+<h6>Media:  {{media}}</h6>
+<h6>Moda:  {{moda}}</h6>
+<h6>Mediana:  {{mediana}}</h6>
+
+<div class="text-center">
+        <img class="img-fluid" src="{% static 'img/MediaModaMediana/imagen.png'%}"
+     alt="Gráfica de numeros aleatorios"/>
+</div>
+</div>
+
+  
+
+{% endblock %}

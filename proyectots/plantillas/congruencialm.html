@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+{% block title %} Multiplicativo {% endblock %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid" style="background-color: rgb(238, 240, 157);">
+  <div class="container">
+    <h1 class="display-4" style="text-align: center; font-family: 'Courier New', Courier, monospace;">MÉTODO CONGRUENCIAL MULTIPLICATIVO</h1>
+    <!--p class="lead">Este modelo presupone que a medida que se incrementan los datos, también se incrementa el patrón estacional.</p-->
+  </div>
+</div> 
+<form action="/congruencialmr/" method="POST">
+    {% csrf_token %}
+    <div class="container center">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Número (Xn):</label>
+      <input type="number" name="numero" class="form-control" id="formGroupExampleInput" placeholder="" required>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Multiplicador (a):</label>
+      <input type="number" name="multiplicador" class="form-control" id="formGroupExampleInput2" placeholder="" required>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Módulo (m):</label>
+        <input type="number" name="modulo" class="form-control" id="formGroupExampleInput2" placeholder="" required>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Número de Iteraciones:</label>
+        <input type="number" name="iteraciones" class="form-control" id="formGroupExampleInput2" placeholder="" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color: #f89545; color: black; margin-left: 50%;">CALCULAR</button>
+  </div>
+  </form>
+{% endblock %}

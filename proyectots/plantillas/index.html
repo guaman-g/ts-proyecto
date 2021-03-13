@@ -1,0 +1,66 @@
+{% extends "base.html"%}
+{% load static %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+<!--input type="text" placeholder="escriba algo">
+<input type="button" title="presionar"-->
+
+
+<div class="row" style="margin-top: 1%;">
+  <div class="col-sm-6">
+    <div class="card container center" style="width: 35rem;">
+      <a style="margin-top: 2%; font-family: 'Courier New', Courier, monospace; color: black;text-align: center; font-size: 300%;">TECSIM</a>
+      <img src="\static\img\propia.jpg" class="card-img-top" alt="" style="margin-top: 2%;">
+      <div class="card-body">
+        <h5 class="card-title">¿Qués es la Simulación?</h5>
+          <p class="card-text" style="text-align: justify;" >Es el proceso de diseñar y desarrollar un modelo computarizado
+              de un sistema o proceso y conducir experimentos con este modelo con el propósito
+              de entender el comportamiento del sistema o evaluar varias estrategias con las
+              cuales se puede operar un sistema, según Shanon Robert.</p>
+              <h5 class="card-title">¿Por qué es importante?</h5>
+              <p class="card-text" style="text-align: justify;">Da el soporte necesario al diseñador durante el
+                proceso de diseño, análisis y diagnosis de sistemas. El software debe
+                complementar el talento del diseñador para que éste pueda modelar y simular de
+                forma lo mas eficientemente posible.
+                </p>
+                <h6 style="font-style: italic;">Seleccione una opción para redireccionarse a los métodos.</h6>
+                <div class="d-flex justify-content-center">
+                  <ul class="pagination pagination-sm">
+                    <li class="page-item active" aria-current="page">
+                      <a class="page-link" href ="/grafico/" style="background-color:#f89545 ;">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="/congruencial/">2</a></li>
+                    <li class="page-item"><a class="page-link" href="/congruencialm/">3</a></li>
+                    <li class="page-item"><a class="page-link" href="/exponencial/">4</a></li>
+                    <li class="page-item"><a class="page-link" href="/montecarlo/">5</a></li>
+                    <li class="page-item"><a class="page-link" href="/inventario/">6</a></li>
+                    <li class="page-item"><a class="page-link" href="/lineaespera/">7</a></li>
+                  </ul>
+                </div>
+      </div>
+     
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card container center" style="width: 35rem;">
+      <a style="margin-top: 2%; font-family: 'Courier New', Courier, monospace; color: black;text-align: center; font-size: 230%;">CASO BANCO DEL PACÍFICO</a>  
+      <img src="\static\img\banco.jpeg" class="card-img-top" alt="..." style="margin-top: 2%;">
+      <div class="card-body">
+        <p class="card-text" style="text-align: justify;">Somos un operador logístico establecido en el mercado desde el año 1976. 
+          Brindamos servicios de almacenamiento, administración de inventarios, despacho y distribución 
+          de productos de acuerdo a las necesidades de nuestros clientes. También contamos con autorización
+          de la Aduana del Ecuador para operar como Depósito Aduanero.
+          Estamos regulados por la Superintendencia de Bancos y por la SENAE, 
+          nos regimos por las disposiciones del Código Orgánico Monetario y Financiero y por Código 
+          Orgánico de la Producción, Comercio e Inversiones y su Reglamento.
+          </p>
+          <a href="/simulacion/" class="btn btn-primary" style="background-color: #f89545; margin-left: 40%; color: black;">SIMULAR</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% block title %} LineaEspera {% endblock %}
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid" style="background-color: rgb(238, 240, 157);">
+  <div class="container">
+    <h1 class="display-4" style="text-align: center; font-family: 'Courier New', Courier, monospace;">MÉTODO LÍNEA DE ESPERA</h1>
+    </div>
+</div> 
+  <form action="/lineaesperar/" method="POST">
+    {% csrf_token %}
+    <div class="container center">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Landa (λ):</label>
+      <input type="number" name="landa" class="form-control" id="formGroupExampleInput" placeholder="" required>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Nu (u):</label>
+      <input type="number" name="niu"class="form-control" id="formGroupExampleInput2" placeholder="" required>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Clientes: </label>
+        <input type="number" name="nclientes" class="form-control" id="formGroupExampleInput2" placeholder="" required>
+      </div>
+      
+    <button type="submit" class="btn btn-primary" style="background-color: #f89545; margin-left: 50%; color: black;">CALCULAR</button>
+  </div>
+  </form>
+  
+{% endblock %}

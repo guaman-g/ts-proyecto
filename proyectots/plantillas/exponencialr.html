@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% load static %}
+{% block title %} Solución {% endblock %}
+{% block content %}
+
+<h1 style="text-align: center; font-family: 'Courier New', Courier, monospace;">SOLUCIÓN EXPONENCIAL</h1>
+
+<div class="container center">
+<div id = "my_table">
+    {{tabla | safe}} 
+</div> 
+
+<div class="text-center">
+        <img class="img-fluid" src="{% static 'img/Exponencial/imagen.png'%}"
+     alt="grafica de numeros aleatorios"/>
+</div>
+</div>
+
+{% endblock %}

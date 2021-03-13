@@ -1,0 +1,6 @@
+django
+numpy
+matplotlib
+pandas_datareader
+pandas
+sympy

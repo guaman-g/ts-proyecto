@@ -5,4 +5,4 @@ pandas_datareader
 pandas
 sympy
 gunicorn==19.9.0
-
+pathlib
